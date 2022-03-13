@@ -2,12 +2,12 @@
   "name": "dune-platform",
   "version": "1.0.0",
   "description": "Web application to showcase how to integrate React, Node.js and Express. Full explanation and guide available on Medium.",
-  "main": "app.js",
+  "main": "server/index.js",
   "engines": {
     "node": "^14"
   },
   "scripts": {
-    "start": "node app",
+    "start": "node server",
     "server": "nodemon",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
