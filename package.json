@@ -13,6 +13,8 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "npm run build --prefix client",
     "install-all": "npm install && npm install --prefix client",
+    "audit-all": "npm audit && npm audit --prefix client",
+    "audit-fix-all": "npm audit fix && npm audit fix --prefix client",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client --production=false && npm run build --prefix client"
   },
   "author": "",
