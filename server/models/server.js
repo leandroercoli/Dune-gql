@@ -17,7 +17,7 @@ class Server {
     this.paths = {
       auth: "/api/auth",
       public: "/public",
-      gql: process.env.GRAPHQL_PATH,
+      gql: "/gql",
     };
 
     this.middlewares();

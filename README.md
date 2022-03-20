@@ -9,7 +9,6 @@ Frontend is written in React + TypeScript, and uses Redux and Redux Toolkit for 
     require('crypto').randomBytes(64).toString('hex')    
 2 - npm run install-all (This will install Node and React dependencies).
 3 - npm run dev (This will run the server and client in parallel through concurrently library).
-4 - Set REACT_APP_GRAPHQL_PATH in client/.env to match GRAPHQL_PATH in .env for server. 
 
 
 # Login
