@@ -15,7 +15,7 @@ function Home() {
     () => contacts.filter((contact) => friends.includes(contact.id)),
     [contacts, friends]
   );
-
+  
   return (
     <TemplateView>
       <FormCard

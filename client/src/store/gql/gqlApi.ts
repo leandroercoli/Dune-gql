@@ -12,7 +12,7 @@ export const TAG_CONTACTS = "Contacts";
 export const gqlApi = createApi({
   reducerPath: "gqlApi",
   baseQuery: graphqlBaseQuery({
-    baseUrl: "/gql",
+    baseUrl: process.env.REACT_APP_GRAPHQL_PATH || "/gql",
   }),
   tagTypes: [TAG_USER, TAG_PLANETS, TAG_CONTACTS],
   endpoints: (builder) => ({
