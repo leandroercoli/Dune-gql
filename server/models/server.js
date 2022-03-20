@@ -34,7 +34,7 @@ class Server {
     await this.apolloServer.start();
     this.apolloServer.applyMiddleware({
       app: this.app,
-      path: process.env.GRAPHQL_PATH, // Custom path
+      path: this.paths.gql, // Custom path
     });
   }
 
