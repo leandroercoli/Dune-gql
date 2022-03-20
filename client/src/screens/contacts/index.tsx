@@ -4,7 +4,7 @@ import { useData } from "hooks/useData";
 import { useProfile } from "hooks/useProfile";
 
 function Contacts() {
-  const { contacts, planets } = useData();
+  const { contacts } = useData();
   const { friends, addFriend, removeFriend } = useProfile();
 
   return (
@@ -19,7 +19,7 @@ function Contacts() {
             info: [
               `${contact.title}`,
               `House ${contact.house}`,
-              `Planet ${planets?.[contact.planet]?.name}`,
+              `Planet ${contact.planet?.name}`,
             ],
             saved: isSaved,
             onSaveClick: isSaved

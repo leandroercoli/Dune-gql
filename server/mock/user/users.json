@@ -4,7 +4,7 @@
     "username": "Paul Atreides",
     "title": "Emperor",
     "house": "Atreides",
-    "planet": "caladan",
+    "planet": 1,
     "email": "paul.atreides@dune.com",
     "img": "/public/paul-atreides.jpg"
   },
@@ -13,7 +13,7 @@
     "username": "Lady Jessica of the Atreides",
     "title": "Lady",
     "house": "Atreides",
-    "planet": "caladan",
+    "planet": 1,
     "email": "lady.jessica@dune.com",
     "img": "/public/lady-jessica.jpg"
   },
@@ -22,7 +22,7 @@
     "username": "Leto Atreides",
     "title": "Duke",
     "house": "Atreides",
-    "planet": "caladan",
+    "planet": 1,
     "email": "leto.atreides@dune.com",
     "img": "/public/leto-atreides.jpeg"
   },
@@ -30,7 +30,7 @@
     "id": 4,
     "username": "Chani",
     "title": "Fremen",
-    "planet": "arrakis",
+    "planet": 3,
     "house": "Fremen",
     "email": "chani@dune.com",
     "img": "/public/chani.jpg"
@@ -40,7 +40,7 @@
     "username": "Duncan Idaho",
     "title": "Swordsmaster",
     "house": "Atreides",
-    "planet": "caladan",
+    "planet": 1,
     "email": "duncan.idaho@dune.com",
     "img": "/public/duncan-idaho.jpg"
   },
@@ -49,7 +49,7 @@
     "username": "Vladimir Harkonnen",
     "title": "Baron",
     "house": "Harkonnen",
-    "planet": "giedi-prime",
+    "planet": 2,
     "email": "vladimir.harkonnen@dune.com",
     "img": "/public/vladimir-harkonnen.jpg"
   },
@@ -58,7 +58,7 @@
     "username": "Glossu Rabban Harkonnen",
     "title": "Count",
     "house": "Harkonnen",
-    "planet": "giedi-prime",
+    "planet": 2,
     "email": "glossu.rabban@dune.com",
     "img": "/public/glossu-rabban-harkonnen.jpg"
   },
@@ -66,7 +66,7 @@
     "id": 8,
     "username": "Stilgar",
     "title": "Fremen",
-    "planet": "arrakis",
+    "planet": 3,
     "house": "Fremen",
     "email": "stilgar@dune.com",
     "img": "/public/stilgar.jpg"
@@ -75,7 +75,7 @@
     "id": 9,
     "username": "Mother Superior",
     "title": "Reverend Mother",
-    "planet": "wallach-IX",
+    "planet": 4,
     "house": "Bene Gesserit",
     "email": "mother.superior@dune.com",
     "img": "/public/mother-superior.jpg"

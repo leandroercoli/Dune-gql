@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f5bd0f42.css",
-    "main.js": "/static/js/main.940c120b.js",
+    "main.css": "/static/css/main.e4f2b499.css",
+    "main.js": "/static/js/main.c349bdff.js",
     "static/js/787.44e022fc.chunk.js": "/static/js/787.44e022fc.chunk.js",
     "static/media/arrakis-poster.jpg": "/static/media/arrakis-poster.4735b342e266db8d7038.jpg",
     "static/media/dune-logo.png": "/static/media/dune-logo.cef912941bafbccefba0.png",
@@ -10,12 +10,12 @@
     "static/media/clear-icon.svg": "/static/media/clear-icon.700a1c953294a24a2e67ba78eb903c88.svg",
     "static/media/user.svg": "/static/media/user.b5989910c447278ea1c582e02ff226fc.svg",
     "index.html": "/index.html",
-    "main.f5bd0f42.css.map": "/static/css/main.f5bd0f42.css.map",
-    "main.940c120b.js.map": "/static/js/main.940c120b.js.map",
+    "main.e4f2b499.css.map": "/static/css/main.e4f2b499.css.map",
+    "main.c349bdff.js.map": "/static/js/main.c349bdff.js.map",
     "787.44e022fc.chunk.js.map": "/static/js/787.44e022fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5bd0f42.css",
-    "static/js/main.940c120b.js"
+    "static/css/main.e4f2b499.css",
+    "static/js/main.c349bdff.js"
   ]
 }

@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
-import { useGetUserQuery } from "store/api/api";
+import { useGetUserQuery } from "store/gql/gqlApi";
 import { useLoginMutation } from "store/auth/authApi";
 import {
   selectToken,
@@ -23,7 +23,7 @@ export const useAuth = () => {
   }, [token, userid]);
 
   const {
-    data: userData,
+    data: user,
     isLoading: isLoadingLoggedUser,
     error,
     isError,
@@ -50,12 +50,12 @@ export const useAuth = () => {
     loggedUser: useMemo(
       () => ({
         token,
-        user: userData?.user,
+        user,
         isLoading: isLoadingLoggedUser,
         error,
         isError,
       }),
-      [token, userData, isLoadingLoggedUser, isError, error]
+      [token, user, isLoadingLoggedUser, isError, error]
     ),
     tryLogin: { login, isLoginRejected, isLoginSuccessful },
     logout,

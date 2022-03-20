@@ -6,7 +6,3 @@ export type Planet = {
   environment: string;
   img: string;
 };
-
-export type PlanetCollection = {
-  [key: string]: Planet;
-};

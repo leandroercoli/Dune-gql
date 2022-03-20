@@ -4,11 +4,11 @@ import FormCard from "components/form-card";
 import { useData } from "hooks/useData";
 import { useProfile } from "hooks/useProfile";
 import { useMemo } from "react";
-import { useHistory, useLocation } from "react-router";
+import { useHistory } from "react-router";
 
 function Home() {
   const history = useHistory();
-  const { contacts, myPlanet } = useData();
+  const { contacts, user: { planet: myPlanet } = {} } = useData();
   const { friends } = useProfile();
 
   const contactFriends = useMemo(
@@ -19,19 +19,19 @@ function Home() {
   return (
     <TemplateView>
       <FormCard
-        iconLabel={myPlanet.name?.slice(0, 1)}
-        label={`My planet, ${myPlanet.name}.`}
+        iconLabel={myPlanet?.name?.slice(0, 1)}
+        label={`My planet, ${myPlanet?.name}.`}
         onClick={() => {
           history.push("/planets");
         }}
         style={{ cursor: "pointer" }}
       >
-        <em>{myPlanet.quote}</em>
-        <span>Environment: {myPlanet.environment}</span>
-        <span>Day length: {myPlanet.day_length}</span>
+        <em>{myPlanet?.quote}</em>
+        <span>Environment: {myPlanet?.environment}</span>
+        <span>Day length: {myPlanet?.day_length}</span>
         <SpaceDivider />
         <div className="form-card-image-container">
-          <img src={myPlanet.img} alt={`${myPlanet.name}`} />
+          <img src={myPlanet?.img} alt={`${myPlanet?.name}`} />
         </div>
       </FormCard>
       <FormCard

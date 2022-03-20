@@ -4,19 +4,17 @@ import FormCard from "components/form-card";
 import { useData } from "hooks/useData";
 
 function Planets() {
-  const { planets, myPlanet } = useData();
-
-  console.log("planets, my planet", planets, myPlanet);
+  const { planets, user: { planet: myPlanet } = {} } = useData();
 
   return (
     <TemplateView title={"Planets"}>
-      {Object.values(planets)
+      {[...planets]
         .sort((planet1, planet2) => (planet1.name > planet2.name ? 1 : -1))
         .map((planet) => (
           <FormCard
             iconLabel={planet.name?.slice(0, 1)}
             label={planet.name}
-            className={myPlanet.id === planet.id ? "form-card-accent" : ""}
+            className={myPlanet?.id === planet.id ? "form-card-accent" : ""}
             key={`planet-card-${planet.id}`}
           >
             <em>{planet.quote}</em>

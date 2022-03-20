@@ -1,39 +1,60 @@
 const express = require("express");
+const { ApolloServer } = require("apollo-server-express");
 const cors = require("cors");
 const path = require("path");
+const { typeDefs, resolvers, context } = require("../gql");
+const { validateToken } = require("../middleware/validate-token");
 
 class Server {
   constructor() {
     this.app = express();
+    this.apolloServer = new ApolloServer({
+      typeDefs,
+      resolvers,
+      context,
+    });
     this.port = process.env.PORT;
     this.paths = {
       auth: "/api/auth",
-      user: "/api/user",
-      homepage: "/api/homepage",
-      assets: "/assets",
+      public: "/public",
+      gql: process.env.GRAPHQL_PATH,
     };
 
     this.middlewares();
     this.routes();
   }
 
-  middlewares() {
+  async middlewares() {
     this.app.use(cors());
     this.app.use(express.json());
     // Pick up React index.html file
-    this.app.use(express.static(path.join(__dirname, "../client/build")));
+    this.app.use(express.static(path.join(__dirname, "../../client/build")));
+
+    // Start and hook the Apollo server to Express
+    await this.apolloServer.start();
+    this.apolloServer.applyMiddleware({
+      app: this.app,
+      path: process.env.GRAPHQL_PATH, // Custom path
+    });
   }
 
   // Bind controllers to routes
   routes() {
+    // REST api
     this.app.use(this.paths.auth, require("../routes/auth"));
-    this.app.use(this.paths.user, require("../routes/user"));
-    this.app.use(this.paths.homepage, require("../routes/homepage"));
+
+    // Validate authorization header for all GQL requests
+    this.app.use(this.paths.gql, validateToken);
+
     // Serve static files
-    this.app.use("/public", express.static(path.join(__dirname, "../public")));
+    this.app.use(
+      this.paths.public,
+      express.static(path.join(__dirname, "../public"))
+    );
+
     // Catch all requests that don't match any route
     this.app.get("*", (req, res) => {
-      res.sendFile(path.join(__dirname, "../client/build/index.html"));
+      res.sendFile(path.join(__dirname, "../../client/build/index.html"));
     });
   }
 

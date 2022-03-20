@@ -1,5 +1,5 @@
-{
-  "caladan": {
+[
+  {
     "id": 1,
     "name": "Caladan",
     "quote": "May you die on Caladan!",
@@ -7,7 +7,7 @@
     "environment": "Lush, oceanic, rainy.",
     "img": "/public/caladan.jpg"
   },
-  "giedi-prime": {
+  {
     "id": 2,
     "name": "Giedi Prime",
     "quote": "Where industry never sleeps.",
@@ -15,7 +15,7 @@
     "environment": "Industrial wasteland, low photosynthetic potential.",
     "img": "/public/giedi-prime.jpg"
   },
-  "arrakis": {
+  {
     "id": 3,
     "name": "Arrakis",
     "quote": "Sand, solitude, spice.",
@@ -23,7 +23,7 @@
     "environment": "Harsh desert, dry, hot.",
     "img": "/public/arrakis.jpg"
   },
-  "wallach-IX": {
+  {
     "id": 4,
     "name": "Wallach IX",
     "quote": "Home of Bene Gesserit training and knowledge.",
@@ -31,4 +31,4 @@
     "environment": "Forest ecosystem, cliffs.",
     "img": "/public/wallach-ix.jpg"
   }
-}
+]

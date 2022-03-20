@@ -1,7 +1,8 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
 import { authApi } from "./authApi";
 import { User } from "data-types/user";
+import { gqlApi } from "store/gql/gqlApi";
 
 type AuthState = {
   userid: string;
@@ -32,9 +33,9 @@ const slice = createSlice({
       }
     );
     builder.addMatcher(
-      authApi.endpoints.getUser.matchFulfilled,
+      gqlApi.endpoints.getUser.matchFulfilled,
       (state, action) => {
-        state.user = action.payload.user;
+        state.user = action.payload;
       }
     );
   },
